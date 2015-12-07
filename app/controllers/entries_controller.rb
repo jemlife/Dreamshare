@@ -7,8 +7,15 @@ class EntriesController < ApplicationController
   end
 
   def create
-    @entry.create(entry_params)
-    redirect_to @entry
+    @entry = Entry.create(entry_params)
+    if @entry.save
+      flash[:notice]
+      redirect_to entries_path
+    end
+  end
+
+  def show
+    @entry = Entry.find(params[:id])
   end
 
   private
