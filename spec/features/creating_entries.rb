@@ -4,7 +4,7 @@ feature 'Creating entries' do
   scenario 'can create a job' do
     visit '/'
     click_link 'New Dream'
-    fill_in 'Caption', with: 'nom nom nom #coffeetime'
+    fill_in 'Content', with: 'nom nom nom #coffeetime'
     click_button 'Create Entry'
     expect(page).to have_content('#coffeetime')
 end

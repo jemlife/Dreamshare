@@ -13,9 +13,10 @@
       </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><%= link_to "Log in" , '#' %></li>
-            <li><%= link_to "Logout", '#' %></li>
-            <li><%= link_to "Register", '#' %></li>
+            <li><%= link_to "Log in" , new_user_session_path %></li>
+            <li><%= link_to "Logout", destroy_user_session_path %></li>
+            <li><%= link_to "Register", new_user_registration_path  %></li>
+            <li><%= link_to "New Dream", new_entry_path %></li>
               </ul>
             </li>
           </ul>
