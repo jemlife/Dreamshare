@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   get 'users/new'
 
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'registrations' } 
   root 'entries#index'
   resources :entries
   # The priority is based upon order of creation: first created -> highest priority.
