@@ -1,2 +1,17 @@
-<h1>Dreamshare</h1>
-<h2>What if we could hear each others dreams?</h2>
+<div class="posts-wrapper row">
+  <% @entries.each do |entry| %>
+    <div class="post">
+      <div class="post-head">
+        <div class="name">
+          Ben Walker
+        </div>
+      </div>
+      <div class="image center-block">
+        <%= link_to (image_tag entry.image.url(:size => '200x400'), class:'img-responsive'), entry_path(entry) %>
+      </div>
+      <p class="caption">
+        <%= entry.content %>
+      </p>
+    </div>
+  <% end %>
+</div>
