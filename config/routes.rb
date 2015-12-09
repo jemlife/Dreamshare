@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+
   get 'users/new'
 
-  devise_for :users, :controllers => { registrations: 'registrations' } 
+  devise_for :users, :controllers => { registrations: 'registrations' }
   root 'entries#index'
   resources :entries
   # The priority is based upon order of creation: first created -> highest priority.

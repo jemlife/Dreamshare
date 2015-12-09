@@ -8,13 +8,17 @@ $gray-medium-light: #eaeaea;
 
 /* universal */
 
-body {
+ body {
   padding-top: 60px;
   background: image-url('stars.jpg');
   background-repeat: no-repeat;
   background-size: 1400px 700px;
 
+
 }
+
+
+
 
 
 section {
@@ -86,7 +90,10 @@ body {
 }
 
 .navbar-brand {
-  color: #fff;
+  a {
+      color: #fff;
+  }
+
 }
 
 
