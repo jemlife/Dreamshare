@@ -1,5 +1,5 @@
 class EntriesController < ApplicationController
-  #before_action :authenticate_user!
+  before_action :current_user, only: :destroy
 
   def index
     @entries = Entry.all
@@ -22,6 +22,12 @@ class EntriesController < ApplicationController
 
   def show
     @entry = Entry.find(params[:id])
+  end
+
+  def destroy
+    @entry.destroy
+    flash[:success] = "Entry deleted"
+    redirect_to request.referrer || root_path
   end
 
   private

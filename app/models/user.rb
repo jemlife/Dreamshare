@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   validates :user_name, presence: true, length: { minimum: 4, maximum: 16 }
+  validates :email, presence: true
   has_many :entries, dependent: :destroy
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable

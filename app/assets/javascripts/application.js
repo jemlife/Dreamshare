@@ -23,3 +23,7 @@ $(document).ready(function() {
 $(document).ready(function() {
   $('h2').fadeIn(2000);
 });
+
+$(document).ready(function() {
+  $('.text-center').fadeIn(2000);
+});

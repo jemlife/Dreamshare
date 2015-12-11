@@ -7,11 +7,18 @@
         </div>
       </div>
       <div class="image center-block">
-        <%= link_to (image_tag entry.image.url(:size => '200x400'), class:'img-responsive'), entry_path(entry) %>
+        <%= link_to (image_tag entry.image.url, class:'img-responsive'), entry_path(entry) %>
       </div>
       <p class="caption">
         <%= entry.content %>
       </p>
+      <span class="timestamp">
+        Posted <%= time_ago_in_words(entry.created_at) %> ago.
+        <% if current_user %>
+        <%= link_to "Delete", entry, method: :delete,
+                                    data: {confirm: 'Are you sure?'} %>
+        <% end %>
+        </span>
     </div>
-  <% end %>
+      <% end %>
 </div>
