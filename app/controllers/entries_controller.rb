@@ -1,5 +1,6 @@
 class EntriesController < ApplicationController
-  before_action :current_user, only: :destroy
+  before_action :authenticate_user!
+  before_action :set_entry, only: [:show, :edit, :update, :destroy]
 
   def index
     @entries = Entry.all
@@ -25,14 +26,22 @@ class EntriesController < ApplicationController
   end
 
   def destroy
-    @entry.destroy
-    flash[:success] = "Entry deleted"
-    redirect_to request.referrer || root_path
+    if @entry.destroy
+      flash[:notice] = "Entry deleted"
+      redirect_to  root_path
+    else
+      render :destroy
+    end
+
   end
 
   private
 
   def entry_params
     params.require(:entry).permit(:content, :image)
+  end
+
+  def set_entry
+    @entry = Entry.find(params[:id])
   end
 end

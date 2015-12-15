@@ -7,7 +7,7 @@ $gray-medium-light: #eaeaea;
 //$white-color: #ffffff;
 
 /* universal */
-.image {
+.image2 {
   background:image-url('stars.jpg');
   //padding-top: 60px;
   background-repeat: no-repeat;
@@ -16,9 +16,6 @@ $gray-medium-light: #eaeaea;
   width: 100%;
   height: 100%;
 
-
-
-   //background-size: cover;
 
  }
 
@@ -32,9 +29,34 @@ $gray-medium-light: #eaeaea;
    color: #000;
  }
 
- h1 {
-   color: #000;
+
+
+ .text-center {
+   letter-spacing: -2px;
+   margin-top: 100px;
+   margin-bottom: 30px;
+   text-align: center;
+   color: #fff;
+   //display: none;
  }
+
+ .body {
+   background: image-url('desert.jpg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-attachment: fixed;
+ }
+
+
+
+.form-control {
+  margin-top: 25px;
+}
+
+form {
+  margin-top: 100px;
+}
+
 
 #login  {
   padding-top: 60px;
@@ -79,21 +101,24 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-}
+  text-align: center;
 
+}
+/*
 h1 {
-  display: none;
+  //display: none;
   //font-size: 3em;
   letter-spacing: -2px;
   margin-top: 100px;
   margin-bottom: 30px;
   text-align: center;
   color: #fff;
-
 }
+*/
+
 
 h2 {
-  display: none;
+//  display: none;
   //font-size: 1.2em;
   letter-spacing: -1px;
   margin-bottom: 30px;
@@ -107,10 +132,11 @@ p {
   line-height: 1.7em;
 }
 
+/*
 .text-center {
   display: none;
 }
-
+*/
 
 /* header */
 /*
@@ -130,7 +156,7 @@ body {
 }
 */
 .navbar.transparent.navbar-inverse {
-  background: rgba(0,0,0,0.4);
+  background: rgba(0,0,0,0.2);
 }
 
 .navbar-brand {
@@ -143,6 +169,7 @@ body {
 .posts-wrapper {
   padding-top: 40px;
   margin: 0 auto;
+  margin-top: 50px;
   max-width: 642px;
   width: 100%;
 }

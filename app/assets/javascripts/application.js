@@ -17,13 +17,6 @@
 
 
 $(document).ready(function() {
-  $('h1').fadeIn(2000);
-});
-
-$(document).ready(function() {
-  $('h2').fadeIn(2000);
-});
-
-$(document).ready(function() {
+  $('.text-center').hide();
   $('.text-center').fadeIn(2000);
 });

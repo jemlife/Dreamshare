@@ -1,9 +1,14 @@
+<body class="body">
+<div class="deviselink">
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <%= simple_form_for @entry do |f| %>
-      <%= f.input :image, class: 'form-control' %>
+      <%= f.input :image, accept: 'image/jpg,image/gif,image/png', class: 'form-control' %>
       <%= f.input :content, class: 'form-control' %>
+      <%= country_select("user", "country", { priority_countries: ["GB", "FR"], selected: "GB" }, { class: 'form-control', data: { attribute: "value" } }) %>
       <%= f.button :submit, class: 'btn-success' %>
     <% end %>
   </div>
 </div>
+</div>
+</body>
