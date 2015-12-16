@@ -17,6 +17,10 @@
                 <div class="deviselink">
                   <%= f.input :password_confirmation, required: true %>
                 </div>
+                <div class="deviselink">
+                  <h5>Country</h5>
+                  <%= country_select("user", "country", { priority_countries: ["GB", "FR"], selected: "GB" }, { class: 'form-control', data: { attribute: "value" } }) %>
+                </div>
                   <%= f.button :submit, "Sign up", class: 'btn btn-primary' %>
                   <% end %>
                   <%= render "devise/shared/links" %>

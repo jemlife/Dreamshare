@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'static_pages#home'
 
   get 'users/new'
+  resources :users
 
   devise_for :users, :controllers => { registrations: 'registrations' }
   #get 'entries/index'

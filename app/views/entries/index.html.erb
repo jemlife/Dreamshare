@@ -14,7 +14,7 @@
         <%= entry.content %>
       </p>
       <span class="timestamp">
-        Posted <%= time_ago_in_words(entry.created_at) %> ago.
+        Posted <%= Time.zone.now %>
         <% if current_user %>
         <%= link_to "Delete", entry, method: :delete,
                                     data: {confirm: 'Are you sure?'} %>

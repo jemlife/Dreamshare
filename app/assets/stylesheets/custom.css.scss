@@ -57,6 +57,14 @@ form {
   margin-top: 100px;
 }
 
+body {
+  padding-top: 60px;
+  background: image-url('waterfall.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
 
 #login  {
   padding-top: 60px;
@@ -70,7 +78,7 @@ form {
   padding-top: 60px;
   background: image-url('northernlights.jpg');
   background-repeat: no-repeat;
-  background-size: 1400px 700px;
+  background-size: 1400px 900px;
 
 }
 
@@ -105,8 +113,13 @@ textarea {
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
-  text-align: center;
+  text-align: center;;
+  margin-top: 100px;
 
+}
+
+h5 {
+  text-align: left;
 }
 /*
 h1 {
@@ -291,8 +304,9 @@ aside {
 }
 
 .gravatar {
-  float: left;
-  margin-right: 10px;
+  margin-top: 50px;
+  //float: left;
+  //margin-right: 10px;
 }
 
 .gravatar_edit {
@@ -302,6 +316,7 @@ aside {
 /* forms */
 
 input, textarea, select, .uneditable-input {
+  margin-top: 25px;
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
