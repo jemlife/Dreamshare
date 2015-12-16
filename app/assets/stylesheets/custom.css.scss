@@ -57,7 +57,7 @@ form {
   margin-top: 100px;
 }
 
-body {
+.body2 {
   padding-top: 60px;
   background: image-url('waterfall.jpg');
   background-repeat: no-repeat;
@@ -78,13 +78,15 @@ body {
   padding-top: 60px;
   background: image-url('northernlights.jpg');
   background-repeat: no-repeat;
-  background-size: 1400px 900px;
+  background-size: cover;
 
 }
 
 input, button, select, textarea {
   color: #000;
 }
+
+
 
 
 
@@ -315,8 +317,10 @@ aside {
 
 /* forms */
 
+
+
 input, textarea, select, .uneditable-input {
-  margin-top: 25px;
+  margin-top: 15px;
   border: 1px solid #bbb;
   width: 100%;
   margin-bottom: 15px;
