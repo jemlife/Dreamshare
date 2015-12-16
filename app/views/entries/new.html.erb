@@ -6,6 +6,7 @@
       <%= f.input :image, accept: 'image/jpg,image/gif,image/png', class: 'form-control' %>
       <%= f.input :content, class: 'form-control' %>
       <%= country_select("user", "country", { priority_countries: ["GB", "FR"], selected: "GB" }, { class: 'form-control', data: { attribute: "value" } }) %>
+      <%= time_zone_select( "user", "time_zone", ActiveSupport::TimeZone.all.sort, model: ActiveSupport::TimeZone) %>
       <%= f.button :submit, class: 'btn-success' %>
     <% end %>
   </div>
