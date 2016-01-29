@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require turbolinks
 //= require_tree .
 
@@ -19,4 +20,6 @@
 $(document).ready(function() {
   $('.text-center').hide();
   $('.text-center').fadeIn(2000);
+
+  $('.btn btn-default dropdown-toggle').dropdown();
 });

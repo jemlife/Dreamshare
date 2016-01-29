@@ -27,8 +27,8 @@ class EntriesController < ApplicationController
 
   def destroy
     if @entry.destroy
-      flash[:notice] = "Entry deleted"
-      redirect_to  root_path
+      flash[:success] = "Entry deleted"
+      redirect_to  entries_path
     else
       render :destroy
     end

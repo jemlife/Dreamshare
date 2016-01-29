@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151216183838) do
+ActiveRecord::Schema.define(version: 20160129034324) do
 
   create_table "entries", force: :cascade do |t|
     t.text     "content"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.string   "image"
+    t.string   "dream_category"
   end
 
   add_index "entries", ["user_id"], name: "index_entries_on_user_id"
