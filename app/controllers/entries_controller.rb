@@ -8,22 +8,13 @@ class EntriesController < ApplicationController
 
   def new
     @entry = current_user.entries.build
-<<<<<<< HEAD
-=======
-
-
->>>>>>> entry-categories
   end
 
   def create
     @entry = current_user.entries.build(entry_params)
 
-<<<<<<< HEAD
-=======
-
->>>>>>> entry-categories
     if @entry.save
-      flash[:notice] = "Entry successfully created. "
+      flash[:success] = "Entry successfully created. "
       redirect_to entries_path
     else
       render :new
@@ -47,11 +38,7 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-<<<<<<< HEAD
-    params.require(:entry).permit(:content, :image)
-=======
-    params.require(:entry).permit(:content, :image, :entry_id)
->>>>>>> entry-categories
+    params.require(:entry).permit(:content, :image, :dream_category)
   end
 
   def set_entry

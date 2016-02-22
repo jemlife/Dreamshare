@@ -1,8 +1,5 @@
 class Entry < ActiveRecord::Base
-<<<<<<< HEAD
-=======
   has_many :categories, dependent: :destroy
->>>>>>> entry-categories
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true

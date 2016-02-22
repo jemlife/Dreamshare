@@ -20,6 +20,5 @@
 $(document).ready(function() {
   $('.text-center').hide();
   $('.text-center').fadeIn(2000);
-
-  $('.btn btn-default dropdown-toggle').dropdown();
+  $('.alert-success').fadeOut(3000);
 });
