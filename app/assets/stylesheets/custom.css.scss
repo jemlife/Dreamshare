@@ -19,12 +19,32 @@ $gray-medium-light: #eaeaea;
 
  }
 
-.dropdown {
-  margin-left: 350px;
-  padding-top: 50px;
+ .panel {
+  border-radius: 8px;
+}
 
+.panel-heading{
+  h1 {
+    text-align: center;
+  }
+  h2 {
+    color: #000;
+  }
+}
+
+.form-group {
+  h4 {
+    color:#000;
+  }
 
 }
+
+h1 {
+  color:#fff;
+}
+
+
+
  .content {
 
    position: absolute;
@@ -37,8 +57,8 @@ $gray-medium-light: #eaeaea;
 
 
 
- .text-center {
-   letter-spacing: -2px;
+ .text-center2 {
+   letter-spacing: 0px;
    margin-top: 100px;
    margin-bottom: 30px;
    text-align: center;
@@ -99,7 +119,7 @@ input, button, select, textarea {
 
 
 .deviselink {
-  color: #fff;
+  color: #000;
 }
 
 

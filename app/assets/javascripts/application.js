@@ -18,7 +18,12 @@
 
 
 $(document).ready(function() {
-  $('.text-center').hide();
-  $('.text-center').fadeIn(2000);
+  $('.text-center2').hide();
+  $('.text-center2').fadeIn(2000);
   $('.alert-success').fadeOut(3000);
 });
+
+var loadFile = function(event) {
+  var output = document.getElementById('image-preview');
+  output.src = URL.createObjectURL(event.target.files[0]);
+};
