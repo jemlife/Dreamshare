@@ -10,6 +10,18 @@ class Entry < ActiveRecord::Base
   mount_uploader :image, ImageUploader
 
 
+  def self.search(search)
+    if search
+      where("dream_category LIKE ?", "%#{search}%")
+      where("content LIKE ?", "%#{search}%")
+      #where("country LIKE ?", "%#{search}%")
+      #where("created_at LIKE ?", "%#{search}%")
+    else
+      all
+    end
+  end
+
+
   private
 
   def image_size

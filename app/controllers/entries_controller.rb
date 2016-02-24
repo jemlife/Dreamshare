@@ -4,7 +4,8 @@ class EntriesController < ApplicationController
 
   def index
     @entries = Entry.all
-  end
+    @entries = Entry.search(params[:search])
+      end
 
   def new
     @entry = current_user.entries.build
@@ -34,6 +35,7 @@ class EntriesController < ApplicationController
     end
 
   end
+
 
   private
 

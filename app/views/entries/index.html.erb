@@ -14,13 +14,19 @@
         <%= entry.content %>
       </p>
       <span class="timestamp">
-        Posted <%= Time.zone.now %>
+        Posted <%= Time.zone.now %>-
+        <%= entry.dream_category %>
+      </span>
+      <span class="delete">
         <% if current_user %>
         <%= link_to "Delete", entry, method: :delete,
                                     data: {confirm: 'Are you sure?'} %>
         <% end %>
         </span>
     </div>
+      <% end %>
+      <% @entries.each do |entry| %>
+        <<%= entry.content %></p>
       <% end %>
 </div>
 </body>

@@ -1,0 +1,7 @@
+
+
+<% if @entries.present? %>
+  <%= render @entries %>
+<% else %>
+  <p>There are no entries containing the term(s) <%= params[:search] %>.</p>
+<% end %>

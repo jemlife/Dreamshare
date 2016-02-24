@@ -21,6 +21,11 @@ $gray-medium-light: #eaeaea;
 
  }
 
+ .delete {
+   float: right;
+   padding-right: 5px;
+ }
+
 
  .panel {
   border-radius: 8px;
@@ -80,9 +85,6 @@ body {
   //padding-top: 100px;
 }
 
-.form-control {
-  margin-top: 25px;
-}
 
 form {
   margin-top: 100px;
