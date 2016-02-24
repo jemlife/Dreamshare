@@ -38,7 +38,7 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:content, :image, :dream_category)
+    params.require(:entry).permit(:content, :image, :dream_category, :country)
   end
 
   def set_entry

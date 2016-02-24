@@ -21,7 +21,7 @@
               ("#{@minimum_password_length} characters minimum" if @minimum_password_length) %>
             </div>
                 <div class="deviselink">
-                  <%= f.input :password_confirmation, required: true,   label: false, placeholder: 'Confirm Password', input_html: { class: 'input-lg' } %> %>
+                  <%= f.input :password_confirmation, required: true,   label: false, placeholder: 'Confirm Password', input_html: { class: 'input-lg' } %>
                 </div>
                   <%= f.button :submit, "Sign up", class: 'btn-lg btn-info btn-block' %>
                   <% end %>

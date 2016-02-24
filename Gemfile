@@ -27,6 +27,9 @@ gem 'devise'
 gem 'mini_magick'
 gem 'fog'
 gem 'country_select'
+gem 'omniauth-facebook', '~> 1.4.0'
+gem 'figaro'
+gem 'certified'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 

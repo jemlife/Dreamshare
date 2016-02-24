@@ -24,7 +24,7 @@
     </div>
     <div class="form-group text-center">
       <h4>Country</h4>
-      <%= country_select("user", "country", { priority_countries: ["GB", "FR"], selected: "GB" },
+      <%= country_select("entry", "country", { priority_countries: ["GB", "FR"], selected: "GB" },
       { class: 'form-control', data: { attribute: "value" } }) %>
       <%= f.button :submit, class: 'btn-success' %>
     </div>
