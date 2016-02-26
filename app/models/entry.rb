@@ -9,11 +9,18 @@ class Entry < ActiveRecord::Base
   #belongs_to :user  default_scope -> { order(created_at: :desc) }
   mount_uploader :image, ImageUploader
 
+  def country_name
+   country = self.country
+   ISO3166::Country[country]
+  end
+
 
   def self.search(search)
     if search
-      where("dream_category LIKE ?", "%#{search}%")
-      where("content LIKE ?", "%#{search}%")
+      where("dream_category LIKE ? OR content LIKE ?
+      OR country LIKE ? OR created_at LIKE ?", "%#{search}%", "%#{search}%",
+      "%#{search}%", "%#{search}%")
+      #where("content LIKE ?", "%#{search}%")
       #where("country LIKE ?", "%#{search}%")
       #where("created_at LIKE ?", "%#{search}%")
     else

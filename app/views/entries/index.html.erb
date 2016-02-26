@@ -4,7 +4,7 @@
     <div class="post">
       <div class="post-head">
         <div class="name">
-          Jeremy
+          <%= entry.user.user_name %>
         </div>
       </div>
       <div class="image center-block">
@@ -14,8 +14,10 @@
         <%= entry.content %>
       </p>
       <span class="timestamp">
-        Posted <%= Time.zone.now %>-
-        <%= entry.dream_category %>
+        Posted- <%= Time.zone.now.strftime("%B %e, %Y at %I:%M %p") %><br>
+        Category- <%= entry.dream_category %><br>
+        Location- <%= entry.country %>
+
       </span>
       <span class="delete">
         <% if current_user %>

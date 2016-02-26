@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160223235158) do
+ActiveRecord::Schema.define(version: 20160224222751) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -52,7 +52,6 @@ ActiveRecord::Schema.define(version: 20160223235158) do
     t.string   "user_name"
     t.string   "provider"
     t.string   "uid"
-    t.string   "user"
     t.string   "country"
   end
 

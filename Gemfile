@@ -26,10 +26,12 @@ gem 'carrierwave'
 gem 'devise'
 gem 'mini_magick'
 gem 'fog'
-gem 'country_select'
 gem 'omniauth-facebook', '~> 1.4.0'
 gem 'figaro'
 gem 'certified'
+gem 'font-awesome-sass', '~> 4.5.0'
+gem 'country_select', git: 'https://github.com/alibabajan/country_select.git'
+
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
