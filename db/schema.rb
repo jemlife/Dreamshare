@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224222751) do
+ActiveRecord::Schema.define(version: 20160303233124) do
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 20160224222751) do
     t.string   "image"
     t.string   "dream_category"
     t.string   "country"
+    t.boolean  "published"
   end
 
   add_index "entries", ["user_id", "created_at"], name: "index_entries_on_user_id_and_created_at"

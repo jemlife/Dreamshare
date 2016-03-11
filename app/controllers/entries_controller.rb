@@ -5,7 +5,11 @@ class EntriesController < ApplicationController
   def index
     @entries = Entry.all
     @entries = Entry.search(params[:search])
-      end
+    @entries = Entry.only_public
+    @entries = Entry.only_private
+
+  end
+
 
   def new
     @entry = current_user.entries.build
@@ -40,7 +44,7 @@ class EntriesController < ApplicationController
   private
 
   def entry_params
-    params.require(:entry).permit(:content, :image, :dream_category, :country)
+    params.require(:entry).permit(:content, :image, :dream_category, :country, :published)
   end
 
   def set_entry
