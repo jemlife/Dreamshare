@@ -402,3 +402,24 @@ body {
     -o-background-size: cover;
 
 }
+
+.panel-heading {
+    margin-top: 75px;
+}
+
+.panel {
+    margin-top: 75px;
+}
+
+form {
+    margin-top: 0px;
+}
+
+.flash {
+  padding-top: 75px;
+
+}
+
+.time {
+    color: #000;
+}
